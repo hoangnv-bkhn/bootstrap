@@ -33,9 +33,57 @@
                     <li class="nav-item"><a href="./contactus.html" class="nav-link"><span
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+
+                        <div class="form-row">
+
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputEmail3" class="sr-only">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputPassword3" class="sr-only">Email address</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label"> Remember me</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <button class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary btn-sm ml-1" type="submit">Sign in</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -48,7 +96,9 @@
                     <img src="./img/logo.png" alt="LOGO" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a href="#reserve-table" class="btn btn-warning btn-lg btn-block btn-sm" role="button">Reserve Table</a>
+                    <a href="#reserve-table" class="btn btn-warning btn-block btn-sm nav-link" role="button"
+                    data-toggle="tooltip" data-html="true" title='Or Call us at  <br><strong>+852 12345678</strong>'
+                    data-placement="bottom">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -235,6 +285,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
 </body>
 
 </html>
